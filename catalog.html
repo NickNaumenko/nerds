@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>catalog</title>
+</head>
+<body>
+	<header class="main-header">
+		<nav class="main-navigation">
+			<a class="main-header-logo" href="index.html">
+				<img src="#" alt="logo">
+			</a>
+			<ul class="site-navigation">
+				<li><a href="#"></a>Студия</li>
+				<li><a href="#">Клиенты</a></li>
+				<li class="site-navigation-current"><a>Магазин</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+			<ul class="user-navigation">
+				<li>Корзина</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="container">
+		<h1 class="page-title">Магазин готовых шаблонов</h1>
+
+		<section class="filters">
+			<h2 class="visually-hidden">Выбор услуг</h2>
+			<form class="filter" action="" method="get">
+				<fieldset>
+					<legend>Стоимость:</legend>
+					<input class="filter-input filter-input-cost" type="range" min="0" max="15000">
+				</fieldset>
+				<fieldset>
+					<legend>Сетка:</legend>
+					<ul>
+						<li class="filter-option">
+							<input class="filter-input filter-input-radio" type="radio" name="net" checked>
+							Адаптивная
+						</li>
+						<li class="filter-option">
+							<input class="filter-input filter-input-radio" type="radio" name="net">
+							Фиксированная
+						</li>
+						<li class="filter-option">
+							<input class="filter-input filter-input-radio" type="radio" name="grid">
+							Резиновая
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend>Особенности:</legend>
+					<ul>
+						<li class="filter-option">
+							<input class="filter-input filter-input-features" type="checkbox" name="slider" checked="">
+							Слайдер
+						</li>
+						<li class="filter-option">
+							<input class="filter-input filter-input-features" type="checkbox" name="features-set">
+							Блок преимуществ
+						</li>
+						<li class="filter-option">
+							<input class="filter-input filter-input-features" type="checkbox" name="news" checked="">
+							Новости
+						</li>
+						<li class="filter-option">
+							<input class="filter-input filter-input-features" type="checkbox" name="gallery">
+							Галерея
+						</li>
+						<li class="filter-option">
+							<input class="filter-input filter-input-features" type="checkbox" name="basket">
+							Корзина
+						</li>
+					</ul>
+				</fieldset>
+				<button type="submit" class="filter-button btn">Показать</button>
+			</form>
+		</section>
+
+		<section class="sort">
+			<h2 class="visually-hidden">Сортировка</h2>
+			<ul>
+				<li class="sort-option-current">По цене</li>
+				<li class="sort-option"><a href="#">По типу</a></li>
+				<li class="sort-option"><a href="#">По названию</a></li>
+			</ul>
+			<ul>
+				<li class="sort-range-current">down</li>
+				<li class="sort-range"><a href="#">up</a></li>
+			</ul>
+		</section>
+
+		<section class="catalog">
+			<h2 class="visually-hidden">Каталог</h2>
+			<ul class="catalog-list">
+				<li class="catalog-item"></li>
+				<li class="catalog-item"></li>
+				<li class="catalog-item"></li>
+				<li class="catalog-item"></li>
+				<li class="catalog-item"></li>
+				<li class="catalog-item"></li>
+			</ul>
+			<ul class="pagination-list">
+				<li class="pagination-item pagination-item-current"><a>1</a></li>
+				<li class="pagination-item"><a href="#"></a>2</li>
+				<li class="pagination-item"><a href="#"></a>3</li>
+				<li class="pagination-item"><a href="#"></a>Следующая</li>
+			</ul>
+		</section>
+	</main>
+
+	<footer class="main-footer">
+		<section class="footer-contacts">
+			<h2 class="visually-hidden">Наши контакты:</h2>
+			<p>
+				Nerds design studio<br>
+				191186, Санкт-Петербург,<br>
+				ул. Б. Конюшенная, д. 19/8<br>
+				тел. +7(812)275-75-75
+			</p>
+			<a class="btn" href="#">Напишите нам</a>
+		</section>
+		<section class="footer-social">
+			<ul>
+				<li><a class="social-btn" href="#">Вконтакте</a></li>
+				<li><a class="social-btn" href="#">Фейсбук</a></li>
+				<li><a class="social-btn" href="#">Инстаграм</a></li>
+			</ul>
+			<p>
+				<b>Давайте дружить, это выгодно!</b>
+				Скидка 10% для друзей из социальных сетей.
+			</p>
+		</section>
+	</footer>
+
+	<section class="modal-message">
+		<h2>Напишите нам</h2>
+		<form action="" method="post">
+			<p class="modal-message-item">
+				Ваше имя:
+				<input type="text" name="name" placeholder="Представьтесь, пожалуйста">
+			</p>
+			<p class="modal-message-item">
+				Ваш e-mail:
+				<input type="email" name="email" placeholder="Для отправки ответа">
+			</p>
+			<p class="modal-message-item">
+				Текст письма:
+				<textarea name="message" id="" cols="30" rows="10">В свободной форме</textarea>
+			</p>
+			<button class="btn" type="submit">Отправить</button>
+		</form>
+	</section>
+</body>
+</html>
