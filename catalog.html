@@ -3,21 +3,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title>catalog</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header class="main-header">
 		<nav class="main-navigation">
 			<a class="main-header-logo" href="index.html">
-				<img src="#" alt="logo">
+				<img src="img/nerds-logo.svg" alt="logo">
 			</a>
 			<ul class="site-navigation">
-				<li><a href="#"></a>Студия</li>
+				<li><a href="#">Студия</a></li>
 				<li><a href="#">Клиенты</a></li>
 				<li class="site-navigation-current"><a>Магазин</a></li>
 				<li><a href="#">Контакты</a></li>
 			</ul>
 			<ul class="user-navigation">
-				<li>Корзина</li>
+				<li class="basket">
+					<a href="">Корзина</a>
+				</li>
 			</ul>
 		</nav>
 	</header>
@@ -27,25 +30,25 @@
 
 		<section class="filters">
 			<h2 class="visually-hidden">Выбор услуг</h2>
-			<form class="filter" action="" method="get">
+			<form class="filter" action="https://echo.htmlacademy.ru" method="get">
 				<fieldset>
 					<legend>Стоимость:</legend>
-					<input class="filter-input filter-input-cost" type="range" min="0" max="15000">
+					<input class="filter-input filter-input-cost" type="range" min="0" max="15000" step="10">
 				</fieldset>
 				<fieldset>
 					<legend>Сетка:</legend>
 					<ul>
 						<li class="filter-option">
-							<input class="filter-input filter-input-radio" type="radio" name="net" checked>
-							Адаптивная
+							<input class="filter-input filter-input-radio" id="filter-option-adaptive" type="radio" name="grid" checked>
+							<label for="filter-option-adaptive">Адаптивная</label>
 						</li>
 						<li class="filter-option">
-							<input class="filter-input filter-input-radio" type="radio" name="net">
-							Фиксированная
+							<input class="filter-input filter-input-radio" id="filter-option-fixed" type="radio" name="grid">
+							<label for="filter-option-fixed">Фиксированная</label>
 						</li>
 						<li class="filter-option">
-							<input class="filter-input filter-input-radio" type="radio" name="grid">
-							Резиновая
+							<input class="filter-input filter-input-radio" id="filter-option-rubber" type="radio" name="grid">
+							<label for="filter-option-rubber">Резиновая</label>
 						</li>
 					</ul>
 				</fieldset>
@@ -53,24 +56,24 @@
 					<legend>Особенности:</legend>
 					<ul>
 						<li class="filter-option">
-							<input class="filter-input filter-input-features" type="checkbox" name="slider" checked="">
-							Слайдер
+							<input class="filter-input filter-input-features" id="filter-option-slider" type="checkbox" name="slider" checked="">
+							<label for="filter-option-slider">Слайдер</label>
 						</li>
 						<li class="filter-option">
-							<input class="filter-input filter-input-features" type="checkbox" name="features-set">
-							Блок преимуществ
+							<input class="filter-input filter-input-features" id="filter-option-features-set" type="checkbox" name="features-set">
+							<label for="filter-option-features-set">Блок преимуществ</label>
 						</li>
 						<li class="filter-option">
-							<input class="filter-input filter-input-features" type="checkbox" name="news" checked="">
-							Новости
+							<input class="filter-input filter-input-features" id="filter-option-news" type="checkbox" name="news" checked="">
+							<label for="filter-option-news">Новости</label>
 						</li>
 						<li class="filter-option">
-							<input class="filter-input filter-input-features" type="checkbox" name="gallery">
-							Галерея
+							<input class="filter-input filter-input-features" id="filter-option-gallery" type="checkbox" name="gallery">
+							<label for="filter-option-gallery">Галерея</label>
 						</li>
 						<li class="filter-option">
-							<input class="filter-input filter-input-features" type="checkbox" name="basket">
-							Корзина
+							<input class="filter-input filter-input-features" id="filter-option-basket" type="checkbox" name="basket">
+							<label for="filter-option-basket">Корзина</label>
 						</li>
 					</ul>
 				</fieldset>
@@ -94,12 +97,24 @@
 		<section class="catalog">
 			<h2 class="visually-hidden">Каталог</h2>
 			<ul class="catalog-list">
-				<li class="catalog-item"></li>
-				<li class="catalog-item"></li>
-				<li class="catalog-item"></li>
-				<li class="catalog-item"></li>
-				<li class="catalog-item"></li>
-				<li class="catalog-item"></li>
+				<li class="catalog-item">
+					<img src="img/img-sedona.jpg" alt="sedona">
+				</li>
+				<li class="catalog-item">
+					<img src="img/img-pink.jpg" alt="pink">
+				</li>
+				<li class="catalog-item">
+					<img src="img/img-barbershop.jpg" alt="barbershop">
+				</li>
+				<li class="catalog-item">
+					<img src="img/img-mishka.jpg" alt="mishka">
+				</li>
+				<li class="catalog-item">
+					<img src="img/img-aplus.jpg" alt="aplus">
+				</li>
+				<li class="catalog-item">
+					<img src="img/img-kvast.jpg" alt="kvast">
+				</li>
 			</ul>
 			<ul class="pagination-list">
 				<li class="pagination-item pagination-item-current"><a>1</a></li>
@@ -113,6 +128,10 @@
 	<footer class="main-footer">
 		<section class="footer-contacts">
 			<h2 class="visually-hidden">Наши контакты:</h2>
+			<p class="map">
+				<img src="img/map.png" alt="">
+				<img src="img/map-marker.png" alt="">
+			</p>
 			<p>
 				Nerds design studio<br>
 				191186, Санкт-Петербург,<br>
@@ -136,21 +155,21 @@
 
 	<section class="modal-message">
 		<h2>Напишите нам</h2>
-		<form action="" method="post">
+		<form action="https://echo.htmlacademy.ru" method="post">
 			<p class="modal-message-item">
-				Ваше имя:
-				<input type="text" name="name" placeholder="Представьтесь, пожалуйста">
+				<label for="modal-message-name">Ваше имя:</label>
+				<input type="text" name="name" id="modal-message-name" placeholder="Представьтесь, пожалуйста">
 			</p>
 			<p class="modal-message-item">
-				Ваш e-mail:
-				<input type="email" name="email" placeholder="Для отправки ответа">
+				<label for="modal-message-email">Ваш e-mail:</label>
+				<input type="email" name="email" id="modal-message-email" placeholder="Для отправки ответа">
 			</p>
 			<p class="modal-message-item">
-				Текст письма:
-				<textarea name="message" id="" cols="30" rows="10">В свободной форме</textarea>
+				<label for="modal-message-text">Текст письма:</label>
+				<textarea name="message" id="modal-message-text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
 			</p>
 			<button class="btn" type="submit">Отправить</button>
 		</form>
-	</section>
+	</section>	
 </body>
 </html>

@@ -3,21 +3,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title>nerds</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header class="main-header">
 		<nav class="main-navigation">
 			<a class="main-header-logo">
-				<img src="#" alt="logo">
+				<img src="img/nerds-logo.svg" alt="logo" width="160" height="65">
 			</a>
 			<ul class="site-navigation">
-				<li><a href="#"></a>Студия</li>
+				<li><a href="#">Студия</a></li>
 				<li><a href="#">Клиенты</a></li>
 				<li><a href="catalog.html">Магазин</a></li>
 				<li><a href="#">Контакты</a></li>
 			</ul>
 			<ul class="user-navigation">
-				<li>Корзина</li>
+				<li class="basket">
+					<a href="">Корзина</a>
+				</li>
 			</ul>
 		</nav>
 	</header>	
@@ -31,7 +34,7 @@
 				Математически выверенный дизайн для вашего сайта или мобильного приложения.
 			</p>
 			<p class="promo-image">
-				<img src="#" alt="promo-image">
+				<img src="img/slide1.png" alt="promo-image">
 			</p>
 			<a class="btn" href="#">Узнать больше</a>
 			<ul class="promo-pagination-list">
@@ -42,20 +45,20 @@
 		</section>
 
 		<section class="services">
-			<h2>Услуги</h2>
+			<h2 class="visually-hidden">Услуги</h2>
 			<ul class="services-list">
 				<li class="service-item">
-					<h3>Веб-сайты</h3>
+					<h3 class="service-item-title">Веб-сайты</h3>
 					<p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
 					<a class="btn" href="#">Заказать</a>
 				</li>
 				<li class="service-item">
-					<h3>Приложения</h3>
+					<h3 class="service-item-title">Приложения</h3>
 					<p>Покорите топ-10 приложений в App-store и Google Play</p>
 					<a class="btn" href="#">Заказать</a>
 				</li>
 				<li class="service-item">
-					<h3>Презентации</h3>
+					<h3 class="service-item-title">Презентации</h3>
 					<p>Вы даже не подозреваете, насколько вы изумительны!</p>
 					<a class="btn" href="#">Заказать</a>
 				</li>
@@ -65,7 +68,7 @@
 		<section class="about-us">
 			<h2 class="visually-hidden">О нас</h2>
 			<p class="about-us-logo">
-				<img src="#" alt="logo">
+				<img src="img/nerds-illustration.png" alt="">
 			</p>
 			<p class="about-us-preview">
 				<b>Мы - маленькая, но гордая дизайн-студия из Краснодара.</b>
@@ -100,10 +103,18 @@
 		<section class="partners">
 			<h2 class="visually-hidden">Партнеры</h2>
 			<ul class="partners-list">
-				<li><a href="#">HTML Academy</a></li>
-				<li><a href="#">Borodinski</a></li>
-				<li><a href="#">Pink</a></li>
-				<li><a href="#">Mishka</a></li>
+				<li>
+					<a href="#"><img class="partners-item-logo" src="img/logo-1.png" alt="HTML Academy"></a>
+				</li>
+				<li>
+					<a href="#"><img class="partners-item-logo" src="img/logo-2.png" alt="Borodinski"></a>
+				</li>
+				<li>
+					<a href="#"><img class="partners-item-logo" src="img/logo-3.png" alt="Pink"></a>
+				</li>
+				<li>
+					<a href="#"><img class="partners-item-logo" src="img/logo-4.png" alt="Mishka"></a>
+				</li>
 			</ul>
 		</section>
 	</main>
@@ -111,6 +122,10 @@
 	<footer class="main-footer">
 		<section class="footer-contacts">
 			<h2 class="visually-hidden">Наши контакты:</h2>
+			<p class="map">
+				<img src="img/map.png" alt="">
+				<img src="img/map-marker.png" alt="">
+			</p>
 			<p>
 				Nerds design studio<br>
 				191186, Санкт-Петербург,<br>
@@ -134,18 +149,18 @@
 
 	<section class="modal-message">
 		<h2>Напишите нам</h2>
-		<form action="" method="post">
+		<form action="https://echo.htmlacademy.ru" method="post">
 			<p class="modal-message-item">
-				Ваше имя:
-				<input type="text" name="name" placeholder="Представьтесь, пожалуйста">
+				<label for="modal-message-name">Ваше имя:</label>
+				<input type="text" name="name" id="modal-message-name" placeholder="Представьтесь, пожалуйста">
 			</p>
 			<p class="modal-message-item">
-				Ваш e-mail:
-				<input type="email" name="email" placeholder="Для отправки ответа">
+				<label for="modal-message-email">Ваш e-mail:</label>
+				<input type="email" name="email" id="modal-message-email" placeholder="Для отправки ответа">
 			</p>
 			<p class="modal-message-item">
-				Текст письма:
-				<textarea name="message" id="" cols="30" rows="10">В свободной форме</textarea>
+				<label for="modal-message-text">Текст письма:</label>
+				<textarea name="message" id="modal-message-text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
 			</p>
 			<button class="btn" type="submit">Отправить</button>
 		</form>
