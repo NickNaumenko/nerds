@@ -20,17 +20,17 @@
 				<li><a href="#">Контакты</a></li>
 			</ul>
 			<ul class="user-navigation">
-				<li class="basket">
-					<a href="">Корзина</a>
+				<li>
+					<a class="basket" href="">Корзина</a>
 				</li>
 			</ul>
 		</nav>
+
+		<h1 class="page-title">Магазин готовых шаблонов</h1>
 	</header>
 
-	<main class="">
-		<h1 class="page-title">Магазин готовых шаблонов</h1>
-
-		<div class="flex-container container">
+	<main class="container">
+		<div class="flex-container">
 			<section class="filters">
 				<h2 class="visually-hidden">Выбор услуг</h2>
 				<form class="filter" action="https://echo.htmlacademy.ru" method="get">
@@ -89,15 +89,13 @@
 				<h2 class="visually-hidden">Каталог</h2>
 
 				<section class="sort">
-					<h2 class="visually-hidden">Сортировать:</h2>
-					<ul>
+					<h2 class="">Сортировать:</h2>
+					<ul class="sort-options-list">
 						<li class="sort-option sort-option-current"><a>По цене</a></li>
 						<li class="sort-option"><a href="#">По типу</a></li>
 						<li class="sort-option"><a href="#">По названию</a></li>
-					</ul>
-					<ul>
-						<li class="sort-range-current"><button>down</button></li>
-						<li class="sort-range"><a href="#"><button>up</button></a></li>
+						<li class="sort-option sort-range sort-range-current"><button class="sort-btn sort-btn-down">down</button></li>
+						<li class="sort-option sort-range"><button class="sort-btn sort-btn-up">up</button></li>
 					</ul>
 				</section>
 
@@ -123,10 +121,10 @@
 					</li>
 				</ul>
 				<ul class="pagination-list">
-					<li class="pagination-item-current"><a>1</a></li>
-					<li class="pagination-item"><a href="#">2</a></li>
-					<li class="pagination-item"><a href="#">3</a></li>
-					<li class="pagination-item"><a href="#">Следующая</a></li>
+					<li><a class="pagination-item pagination-item-current">1</a></li>
+					<li><a class="pagination-item" href="#">2</a></li>
+					<li><a class="pagination-item" href="#">3</a></li>
+					<li><a class="pagination-item" href="#">Следующая</a></li>
 				</ul>
 			</section>
 		</div>
@@ -136,22 +134,40 @@
 		<section class="footer-contacts">
 			<h2 class="visually-hidden">Наши контакты:</h2>
 			<p class="map">
-				<img src="img/map.png" alt="Как к нам проехать:">
-				<img src="img/map-marker.png" alt="">
+				<!-- <img src="img/map.png" alt="Как к нам проехать:">
+				<img src="img/map-marker.png" alt=""> -->
 			</p>
+			<div>
 			<p class="address">
 				<b>Nerds design studio</b><br>
 				191186, Санкт-Петербург,<br>
 				ул. Б. Конюшенная, д. 19/8<br>
-				тел. +7(812)275-75-75
+				<span class="phone">тел. +7(812)275-75-75</span>
+				<a class="btn" href="#">Напишите нам</a>
 			</p>
-			<a class="btn" href="#">Напишите нам</a>
+			
 		</section>
+		
 		<section class="footer-social container">
 			<ul>
-				<li><a class="social-btn" href="#">Вконтакте</a></li>
-				<li><a class="social-btn" href="#">Фейсбук</a></li>
-				<li><a class="social-btn" href="#">Инстаграм</a></li>
+				<li>
+					<a class="social-btn" href="#">
+						<img src="img/vk-icon.svg" alt="" width="26" height="15">
+						<span class="visually-hidden">Вконтакте</span>
+					</a>
+				</li>
+				<li>
+					<a class="social-btn" href="#">
+						<img src="img/fb-icon.svg" alt="" width="12" height="22">
+						<span class="visually-hidden">Фейсбук</span>
+					</a>
+				</li>
+				<li>
+					<a class="social-btn" href="#">
+						<img src="img/insta-icon.svg" alt="" width="21" height="21">
+						<span class="visually-hidden">Инстаграм</span>
+					</a>
+				</li>
 			</ul>
 			<p>
 				<b>Давайте дружить, это выгодно!</b><br>
