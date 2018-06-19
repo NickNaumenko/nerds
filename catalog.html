@@ -34,23 +34,37 @@
 			<section class="filters">
 				<h2 class="visually-hidden">Выбор услуг</h2>
 				<form class="filter" action="https://echo.htmlacademy.ru" method="get">
-					<fieldset>
+
+					<fieldset class="range-cost">
 						<legend>Стоимость:</legend>
-						<input class="filter-input filter-input-cost" type="range" min="0" max="15000" step="10">
+						<div class="range-field">
+							<div class="scale"></div>
+							<div class="toggle toggle-min"></div>
+							<div class="toggle toggle-max"></div>
+						</div>
+						<div class="range-inputs">
+							<label for="">
+								От<input type="number" name="min-cost" value="0">
+							</label>
+							<label for="">
+								До<input type="number" name="max-cost" value="15000">
+							</label>
+						</div>
 					</fieldset>
+
 					<fieldset>
 						<legend>Сетка:</legend>
 						<ul class="filter-grid-list">
 							<li class="filter-option">
-								<input class="filter-input filter-input-radio" id="filter-option-adaptive" type="radio" name="grid" checked>
+								<input class="filter-input filter-input-radio visually-hidden" id="filter-option-adaptive" type="radio" name="grid" checked>
 								<label for="filter-option-adaptive">Адаптивная</label>
 							</li>
 							<li class="filter-option">
-								<input class="filter-input filter-input-radio" id="filter-option-fixed" type="radio" name="grid">
+								<input class="filter-input filter-input-radio visually-hidden" id="filter-option-fixed" type="radio" name="grid" disabled="">
 								<label for="filter-option-fixed">Фиксированная</label>
 							</li>
 							<li class="filter-option">
-								<input class="filter-input filter-input-radio" id="filter-option-rubber" type="radio" name="grid">
+								<input class="filter-input filter-input-radio visually-hidden" id="filter-option-rubber" type="radio" name="grid">
 								<label for="filter-option-rubber">Резиновая</label>
 							</li>
 						</ul>
@@ -59,23 +73,23 @@
 						<legend>Особенности:</legend>
 						<ul class="filter-features-list">
 							<li class="filter-option">
-								<input class="filter-input filter-input-features" id="filter-option-slider" type="checkbox" name="slider" checked="">
+								<input class="filter-input filter-input-features visually-hidden" id="filter-option-slider" type="checkbox" name="slider" checked="">
 								<label for="filter-option-slider">Слайдер</label>
 							</li>
 							<li class="filter-option">
-								<input class="filter-input filter-input-features" id="filter-option-features-set" type="checkbox" name="features-set">
+								<input class="filter-input filter-input-features visually-hidden" id="filter-option-features-set" type="checkbox" name="features-set">
 								<label for="filter-option-features-set">Блок преимуществ</label>
 							</li>
 							<li class="filter-option">
-								<input class="filter-input filter-input-features" id="filter-option-news" type="checkbox" name="news" checked="">
+								<input class="filter-input filter-input-features visually-hidden" id="filter-option-news" type="checkbox" name="news" checked="">
 								<label for="filter-option-news">Новости</label>
 							</li>
 							<li class="filter-option">
-								<input class="filter-input filter-input-features" id="filter-option-gallery" type="checkbox" name="gallery">
+								<input class="filter-input filter-input-features visually-hidden" id="filter-option-gallery" type="checkbox" name="gallery" disabled="">
 								<label for="filter-option-gallery">Галерея</label>
 							</li>
 							<li class="filter-option">
-								<input class="filter-input filter-input-features" id="filter-option-basket" type="checkbox" name="basket">
+								<input class="filter-input filter-input-features visually-hidden" id="filter-option-basket" type="checkbox" name="basket">
 								<label for="filter-option-basket">Корзина</label>
 							</li>
 						</ul>
@@ -103,21 +117,51 @@
 				<ul class="catalog-list">
 					<li class="catalog-item">
 						<img src="img/img-sedona.jpg" alt="sedona">
+						<div class="catalog-item-information">
+							<h3>Sedona</h3>
+							<p>Информационный сайт для туристов</p>
+							<a href="#" class="btn"> 9 900 руб.</a>
+						</div>
 					</li>
 					<li class="catalog-item">
 						<img src="img/img-pink.jpg" alt="pink">
+						<div class="catalog-item-information">
+							<h3>Pink app</h3>
+							<p>Продуктовый лендинг приложения для iOS и Android</p>
+							<a href="#" class="btn"> 9 900 руб.</a>
+						</div>
 					</li>
 					<li class="catalog-item">
 						<img src="img/img-barbershop.jpg" alt="barbershop">
+						<div class="catalog-item-information">
+							<h3>Barbershop</h3>
+							<p>Сайт салона красоты. Для мужчин, да.</p>
+							<a href="#" class="btn"> 9 900 руб.</a>
+						</div>
 					</li>
 					<li class="catalog-item">
 						<img src="img/img-mishka.jpg" alt="mishka">
+						<div class="catalog-item-information">
+							<h3>Mishka</h3>
+							<p>Интернет-магазин вязаных игрушек</p>
+							<a href="#" class="btn"> 9 900 руб.</a>
+						</div>
 					</li>
 					<li class="catalog-item">
 						<img src="img/img-aplus.jpg" alt="aplus">
+						<div class="catalog-item-information">
+							<h3>A Plus</h3>
+							<p>Лендинг курсов повышения квалификации</p>
+							<a href="#" class="btn"> 9 900 руб.</a>
+						</div>
 					</li>
 					<li class="catalog-item">
 						<img src="img/img-kvast.jpg" alt="kvast">
+						<div class="catalog-item-information">
+							<h3>Кваст</h3>
+							<p>Промо-сайт производителя крафтового кваса</p>
+							<a href="#" class="btn"> 9 900 руб.</a>
+						</div>
 					</li>
 				</ul>
 				<ul class="pagination-list">
@@ -138,13 +182,15 @@
 				<img src="img/map-marker.png" alt=""> -->
 			</p>
 			<div>
-			<p class="address">
-				<b>Nerds design studio</b><br>
-				191186, Санкт-Петербург,<br>
-				ул. Б. Конюшенная, д. 19/8<br>
-				<span class="phone">тел. +7(812)275-75-75</span>
-				<a class="btn" href="#">Напишите нам</a>
-			</p>
+			<div class="container">
+				<p class="address">
+					<b>Nerds design studio</b><br>
+					191186, Санкт-Петербург,<br>
+					ул. Б. Конюшенная, д. 19/8<br>
+					<span class="phone">тел. +7(812)275-75-75</span>
+					<a class="btn" href="#">Напишите нам</a>
+				</p>
+			</div>
 			
 		</section>
 		

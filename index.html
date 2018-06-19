@@ -152,10 +152,12 @@
 	<footer class="main-footer">
 		<section class="footer-contacts">
 			<h2 class="visually-hidden">Наши контакты:</h2>
-			<p class="map">
-				<!-- <img src="img/map.png" alt="Как к нам проехать:">
-				<img src="img/map-marker.png" alt=""> -->
-			</p>
+			<div class="map" id="my-map" style="height: 416px"></div>
+			<!-- <p class="map">
+				
+				<img src="img/map.png" alt="Как к нам проехать:">
+				<img src="img/map-marker.png" alt="">
+			</p> -->
 			<div>
 			<div class="container">
 				<p class="address">
@@ -196,25 +198,33 @@
 			</p>
 		</section>
 	</footer>
-
-<!-- 	<section class="modal-message">
+	<section class="modal-message">
 		<h2>Напишите нам</h2>
 		<form action="https://echo.htmlacademy.ru" method="post">
-			<p class="modal-message-item">
-				<label for="modal-message-name">Ваше имя:</label>
-				<input type="text" name="name" id="modal-message-name" placeholder="Представьтесь, пожалуйста">
-			</p>
-			<p class="modal-message-item">
-				<label for="modal-message-email">Ваш e-mail:</label>
-				<input type="email" name="email" id="modal-message-email" placeholder="Для отправки ответа">
-			</p>
+			<div class="user-contacts">
+				<p class="modal-message-item">
+					<label for="modal-message-name">Ваше имя:</label>
+					<input type="text" name="name" id="modal-message-name" placeholder="Представьтесь, пожалуйста">
+				</p>
+				<p class="modal-message-item">
+					<label for="modal-message-email">Ваш e-mail:</label>
+					<input type="email" name="email" id="modal-message-email" placeholder="Для отправки ответа">
+				</p>
+			</div>
+
 			<p class="modal-message-item">
 				<label for="modal-message-text">Текст письма:</label>
-				<textarea name="message" id="modal-message-text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+				<textarea name="message" id="modal-message-text" cols="30" rows="6" placeholder="В свободной форме"></textarea>
 			</p>
 			<button class="btn" type="submit">Отправить</button>
 		</form>
-		<button class="modal-close">Закрыть</button>
-	</section>	 -->	
+		<button class="modal-close">Закрыть<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21"><path fill="#FB565A" d="M13.328 10.5l7.371-7.371a1.003 1.003 0 0 0 0-1.414L19.285.3a1.003 1.003 0 0 0-1.414 0L10.5 7.672 3.129.301a1.003 1.003 0 0 0-1.414 0L.301 1.715a1.003 1.003 0 0 0 0 1.414L7.672 10.5.301 17.871a1.003 1.003 0 0 0 0 1.414l1.415 1.414a1.003 1.003 0 0 0 1.414 0l7.371-7.371 7.371 7.371a1.003 1.003 0 0 0 1.414 0l1.414-1.414a1.003 1.003 0 0 0 0-1.414L13.328 10.5z"/></svg></button>
+	</section>
+		
+	<script src="js/script.js"></script>	
+	<script src="js/script-map.js"></script>
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBpk5Rms8viGFtXv7XnfozZ-KG9VIU57I&callback=initMap">
+    </script>
 </body>
 </html>
