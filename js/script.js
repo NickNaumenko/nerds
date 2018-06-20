@@ -4,12 +4,12 @@ let close = popup.querySelector(".modal-close");
 let form = popup.querySelector("form");
 let userName = popup.querySelector("[name=name]");
 let email = popup.querySelector("[name=email]");
-let storage = {
-	name: localStorage.getItem("name"),
-	email: localStorage.getItem("email")
-}
+// let storage = {
+// 	name: localStorage.getItem("name"),
+// 	email: localStorage.getItem("email")
+// }
 let messageText = popup.querySelector("textarea")
-console.log(storage.name);
+// console.log(myStorage);
 
 writeUsButton.addEventListener("click", (evt) => {
 	evt.preventDefault();
@@ -49,6 +49,11 @@ form.addEventListener("submit", (evt) => {
 	localStorage.setItem("name", userName.value);
 	localStorage.setItem("email", email.value);
 });
+
+var storage = {
+	name: localStorage.getItem("name"),
+	email: localStorage.getItem("email")
+}
 
 
 
