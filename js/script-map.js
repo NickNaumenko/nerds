@@ -1,8 +1,8 @@
 function initMap() {
-	var point = {lat: 59.938816, lng: 30.323057};
-	var center = {lat: 59.9397, lng: 30.3205};
+	var point = {lat: 59.93873, lng: 30.32310};
+	var center = {lat: 59.93911, lng: 30.32149};
 	var map = new google.maps.Map(document.getElementById("my-map"), {
-		zoom: 16,
+		zoom: 17,
 		center: center
 	});
 	var image = {
