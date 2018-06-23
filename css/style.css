@@ -144,7 +144,7 @@ a {
 .user-navigation a {
 	display: block;
 	padding-top: 27px;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 
 	color: #000000;
 }
@@ -215,7 +215,7 @@ a {
 .slider {
 	position: relative;
 	width: 100%;
-	height: 429px;
+	height: 431px;
 }
 
 .slides {	
@@ -278,7 +278,7 @@ a {
 
 .slide h3 {
 	margin: 0;
-	padding-top: 76px;
+	padding-top: 78px;
 	margin-bottom: 26px;
 	font-size: 55px;
 	line-height: 55px;
@@ -795,7 +795,7 @@ a {
 /*inner-page styles*/
 
 .main-header {
-	margin-bottom: 60px;
+	margin-bottom: 56px;
 }
 
 .inner-page .main-header-logo:hover,
@@ -810,8 +810,8 @@ a {
 .page-title {
 	margin: 0;
 	padding: 0;
-	padding-top: 75px;
-	padding-bottom: 105px;
+	padding-top: 78px;
+	padding-bottom: 107px;
 
 	font-size: 55px;
 	line-height: 55px;
@@ -821,6 +821,7 @@ a {
 
 	background-color: #eeeeee;
 }
+
 
 .flex-container {
 	display: flex;
@@ -834,7 +835,7 @@ a {
 .filter fieldset {
 	margin: 0;
 	padding: 0;
-	margin-bottom: 48px;
+	margin-bottom: 23px;
 	border: none;
 }
 
@@ -849,8 +850,12 @@ a {
 	color: #000000;
 }
 
+fieldset.range-cost {
+	margin-bottom: 56px;
+}
+
 .range-cost legend {
-	margin-bottom: 50px;
+	margin-bottom: 48px;
 }
 
 .range-field {
@@ -924,9 +929,10 @@ a {
 	box-sizing: border-box;
 	width: 80px;
 	margin-left: 11px;
-	padding-top: 8px;
+	padding-top: 10px;
 	padding-bottom: 8px;
 
+	font-size: 16px;
 	text-align: center;
 
 	background-color: #eeeeee;
@@ -953,7 +959,7 @@ a {
 }
 
 .filter-option {
-	margin-bottom: 17px;
+	margin-bottom: 21px;
 
 	color: #283136;
 	line-height: 20px;
@@ -1022,7 +1028,7 @@ a {
 .filter-input-features + label::before {
 	content: "";
 	position: absolute;
-	top: 0;
+	top: -1px;
 	left: 0;
 
 	width: 27px;
@@ -1052,6 +1058,8 @@ a {
 
 .filter-button {
 	color: #000000;
+	padding-left: 88px;
+	padding-right: 88px;
 
 	background-color: #eeeeee;
 }
@@ -1068,7 +1076,8 @@ a {
 
 .sort {
 	display: flex;
-	margin-bottom: 55px;
+	justify-content: space-between;
+	margin-bottom: 48px;
 }
 
 
@@ -1084,9 +1093,15 @@ a {
 	color: #000000;
 }
 
-.sort-options-list {
+.sort-options {
+	display: flex;
+	justify-content: space-between;
+	width: 360px;
+}
+
+.sort-options-list,
+.sort-range-list {	
 	margin: 0;
-	margin-left: auto;
 	padding: 0;
 
 	list-style: none;	
@@ -1094,7 +1109,13 @@ a {
 
 .sort-option {
 	display: inline-block;
+
+	margin-right: 20px;
 	
+}
+
+.sort-option:last-child {
+	margin-right: 0;
 }
 
 .sort-option a {
@@ -1105,8 +1126,8 @@ a {
 	color: rgba(0, 0, 0, 0.3);
 }
 
-.sort-option a:hover,
-.sort-option a:focus {
+.sort-option:not(.sort-option-current) a:hover,
+.sort-option:not(.sort-option-current) a:focus {
 	color: rgba(0, 0, 0, 0.6);
 }
 
@@ -1115,13 +1136,38 @@ a {
 	color: #000000;
 }
 
+.sort-range {
+	display: inline-block;
+}
+
+
+.sort-btn {
+	margin: 0;
+
+	font-size: 0;
+
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.sort-range:hover:not(.sort-btn-current) > svg {
+	opacity: 0.2;
+}
+
+.sort-btn-current > svg polygon,
+.sort-btn:active > svg polygon {
+	fill: #231f20;
+}
+
+
 .catalog-list {
 	display: flex;
 	width: 760px;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin: 0;
-	margin-bottom: 60px;
+	margin-bottom: 28px;
 	padding: 0;
 
 	list-style: none;
@@ -1207,6 +1253,7 @@ a {
 .pagination-list li {
 	display: inline-block;
 	vertical-align: middle;
+	margin-right: 7px;
 }
 
 .pagination-item {
@@ -1219,10 +1266,16 @@ a {
 	line-height: 18px;
 	color: #000000;
 	text-align: center;
+	text-transform: uppercase;
 	vertical-align: middle;
 
 	background-color: #eeeeee;
 	outline: none;
+}
+
+.pagination-item-big {
+	padding-left: 78px;
+	padding-right: 78px;
 }
 
 .pagination-item:hover:not(.pagination-item-current),
@@ -1240,4 +1293,8 @@ a {
 .pagination-item-current {
 	background-color: #ffffff;
 	border: 3px solid #dbdbdb;
+}
+
+.inner-page .main-footer {
+	margin-top: 58px;
 }

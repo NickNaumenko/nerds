@@ -104,13 +104,22 @@
 
 				<section class="sort">
 					<h2 class="">Сортировать:</h2>
-					<ul class="sort-options-list">
-						<li class="sort-option sort-option-current"><a>По цене</a></li>
-						<li class="sort-option"><a href="#">По типу</a></li>
-						<li class="sort-option"><a href="#">По названию</a></li>
-						<li class="sort-option sort-range sort-range-current"><button class="sort-btn sort-btn-down">down</button></li>
-						<li class="sort-option sort-range"><button class="sort-btn sort-btn-up">up</button></li>
-					</ul>
+					<div class="sort-options">
+						<ul class="sort-options-list">
+							<li class="sort-option sort-option-current"><a>По цене</a></li>
+							<li class="sort-option"><a href="#">По типу</a></li>
+							<li class="sort-option"><a href="#">По названию</a></li>
+						</ul>
+						<ul class="sort-range-list">
+							<li class="sort-range">
+								<button class="sort-btn sort-btn-down sort-btn-current">down<svg width="11" height="10"><polygon points="0,0 5,10 10,0" fill="#a6a6a6"/></svg></button>
+							</li>
+							<li class="sort-range">
+								<button class="sort-btn sort-btn-up">up<svg width="11" height="10"><polygon points="0,10 5,0 10,10" fill="#a6a6a6"/></svg></button>
+							</li>
+						</ul>
+					</div>
+					
 				</section>
 
 
@@ -168,7 +177,7 @@
 					<li><a class="pagination-item pagination-item-current">1</a></li>
 					<li><a class="pagination-item" href="#">2</a></li>
 					<li><a class="pagination-item" href="#">3</a></li>
-					<li><a class="pagination-item" href="#">Следующая</a></li>
+					<li><a class="pagination-item pagination-item-big" href="#">Следующая</a></li>
 				</ul>
 			</section>
 		</div>
@@ -247,6 +256,7 @@
 	</section>
 
 	<script src="js/script.js"></script>
+	<script src="js/range.js"></script>
 	<script src="js/script-map.js"></script>
 	<script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBpk5Rms8viGFtXv7XnfozZ-KG9VIU57I&callback=initMap">
