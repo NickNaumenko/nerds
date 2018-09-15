@@ -4,33 +4,33 @@
 	<meta charset="UTF-8">
 	<title>catalog</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body class="inner-page">
 	<header class="main-header">
-		<nav class="main-navigation container">
-			<a class="main-header-logo" href="index.html">
-				<img src="img/nerds-logo.svg" alt="Nerds" width="160" height="65">
-			</a>
-			<ul class="site-navigation">
-				<li><a href="#">Студия</a></li>
-				<li><a href="#">Клиенты</a></li>
-				<li class="site-navigation-current"><a>Магазин</a></li>
-				<li><a href="#">Контакты</a></li>
-			</ul>
-			<ul class="user-navigation">
-				<li>
-					<a class="basket" href="">Корзина</a>
-				</li>
-			</ul>
-		</nav>
+		<div class="container">
+			<nav class="main-nav">
+				<a class="main-nav__logo" href="index.html">
+					<img src="img/nerds-logo.svg" alt="logo" width="160" height="65">
+				</a>
+				<ul class="site-navigation">
+					<li><a class="site-navigation__link" href="#">Студия</a></li>
+					<li><a class="site-navigation__link" href="#">Клиенты</a></li>
+					<li><a class="site-navigation__link site-navigation__link--current">Магазин</a></li>
+					<li><a class="site-navigation__link" href="#">Контакты</a></li>
+				</ul>
+				<ul class="user-navigation">
+					<li>
+						<a class="user-navigation__link user-navigation__link--basket" href="">Корзина</a>
+					</li>
+				</ul>
+			</nav>
 
-		<h1 class="page-title">Магазин готовых шаблонов</h1>
+			<h1 class="page-title">Магазин готовых шаблонов</h1>
+		</div>
 	</header>
-
-	<main class="container">
-		<div class="flex-container">
+	<main class="page-main">
+		<div class="flex-container container">
 			<section class="filters">
 				<h2 class="visually-hidden">Выбор услуг</h2>
 				<form class="filter" action="https://echo.htmlacademy.ru" method="get">
@@ -97,7 +97,6 @@
 					<button type="submit" class="btn filter-button">Показать</button>
 				</form>
 			</section>
-
 			
 			<section class="catalog">
 				<h2 class="visually-hidden">Каталог</h2>
@@ -179,7 +178,7 @@
 					<li><a class="pagination-item" href="#">3</a></li>
 					<li><a class="pagination-item pagination-item-big" href="#">Следующая</a></li>
 				</ul>
-			</section>
+			</section>				
 		</div>
 	</main>
 
@@ -187,11 +186,6 @@
 		<section class="footer-contacts">
 			<h2 class="visually-hidden">Наши контакты:</h2>
 			<div class="map" id="my-map" style="height: 416px"></div>
-			<!-- <p class="map">
-				
-				<img src="img/map.png" alt="Как к нам проехать:">
-				<img src="img/map-marker.png" alt="">
-			</p> -->
 			
 			<div class="container">
 				<p class="address">
@@ -202,9 +196,8 @@
 					<a class="btn" href="#">Напишите нам</a>
 				</p>
 			</div>
-			
 		</section>
-		
+
 		<section class="footer-social container">
 			<ul>
 				<li>
@@ -230,8 +223,9 @@
 				<b>Давайте дружить, это выгодно!</b><br>
 				Скидка 10% для друзей из социальных сетей.
 			</p>
-		</section>
+		</section>			
 	</footer>
+
 	<section class="modal-message">
 		<h2>Напишите нам</h2>
 		<form action="https://echo.htmlacademy.ru" method="post">
@@ -256,7 +250,6 @@
 	</section>
 
 	<script src="js/script.js"></script>
-	<script src="js/range.js"></script>
 	<script src="js/script-map.js"></script>
 	<script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBpk5Rms8viGFtXv7XnfozZ-KG9VIU57I&callback=initMap">

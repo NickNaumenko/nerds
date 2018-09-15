@@ -1,6 +1,5 @@
-let slides = document.querySelectorAll(".slide");
-let sliderControls = document.querySelectorAll(".slider-controler");
-console.log(sliderControls);
+const slides = document.querySelectorAll(".slide");
+const sliderControls = document.querySelectorAll(".slider-controler");
 
 let currentIndex = 0;
 

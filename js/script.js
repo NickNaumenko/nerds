@@ -1,28 +1,14 @@
-let popup = document.querySelector(".modal-message");
-let writeUsButton = document.querySelector(".address > .btn");
-let close = popup.querySelector(".modal-close");
-let form = popup.querySelector("form");
-let userName = popup.querySelector("[name=name]");
-let email = popup.querySelector("[name=email]");
-// let storage = {
-// 	name: localStorage.getItem("name"),
-// 	email: localStorage.getItem("email")
-// }
+const popup = document.querySelector(".modal-message");
+const writeUsButton = document.querySelector(".address > .btn");
+const close = popup.querySelector(".modal-close");
+const form = popup.querySelector("form");
+const userName = popup.querySelector("[name=name]");
+const email = popup.querySelector("[name=email]");
 let messageText = popup.querySelector("textarea")
-// console.log(myStorage);
 
 writeUsButton.addEventListener("click", (evt) => {
 	evt.preventDefault();
-	popup.classList.add("modal-message-show");
-
-	if (storage.name) {
-		userName.value = storage.name;
-		email.value = storage.email;
-		messageText.focus();
-		} else {
-	userName.focus();
-	}
-	
+	popup.classList.add("modal-message-show");	
 });
 
 close.addEventListener("click", (evt) => {
@@ -45,16 +31,4 @@ form.addEventListener("submit", (evt) => {
 		popup.offsetWidth = popup.offsetWidth;
 		popup.classList.add("modal-error");		
 	}
-
-	localStorage.setItem("name", userName.value);
-	localStorage.setItem("email", email.value);
 });
-
-var storage = {
-	name: localStorage.getItem("name"),
-	email: localStorage.getItem("email")
-}
-
-
-
-console.log(close);
